@@ -2,8 +2,8 @@ import React from "react";
 import logoImg from "@/assets/logo.png";
 import Link from "next/link";
 import Image from "next/image";
-import { loadGetInitialProps } from "next/dist/shared/lib/utils";
 import { HeaderBackground } from "./header-background";
+import { NavLink } from "./nav-link";
 
 export const Header: React.FC = () => {
     return (
@@ -19,20 +19,10 @@ export const Header: React.FC = () => {
                 <nav>
                     <ul className="flex gap-[1.5] text-xl">
                         <li>
-                            <Link
-                                href="/meals"
-                                className="text-[#ddd6cb] font-bold py-2 px-4 active:bg-clip-text active:text-transparent hover:bg-clip-text hover:text-transparent rounded-lg bg-gradient-to-r active:from-[#ff8a05] active:to-[#f9b331] hover:from-[#ff8a05] hover:to-[#f9b331] "
-                            >
-                                {"meals"}
-                            </Link>
+                            <NavLink href="/meals">{"meals"}</NavLink>
                         </li>
                         <li>
-                            <Link
-                                href="/community"
-                                className="text-[#ddd6cb] font-bold py-2 px-4 active:bg-clip-text active:text-transparent hover:bg-clip-text hover:text-transparent rounded-lg bg-gradient-to-r active:from-[#ff8a05] active:to-[#f9b331] hover:from-[#ff8a05] hover:to-[#f9b331]"
-                            >
-                                {"community"}
-                            </Link>
+                            <NavLink href="/community">{"community"}</NavLink>
                         </li>
                     </ul>
                 </nav>
