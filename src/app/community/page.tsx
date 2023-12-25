@@ -1,11 +1,11 @@
 import React from "react";
 import classes from "./page.module.css";
 import Image from "next/image";
-import mealIcon from "@/assets/meal.svg";
-import communityIcon from "@/assets/community.svg";
-import eventsIcon from "@/assets/events.svg";
+import mealIcon from "@/assets/meal.png";
+import communityIcon from "@/assets/community.png";
+import eventsIcon from "@/assets/events.png";
 
-export const Page: React.FC = () => {
+export const CommunityPage: React.FC = () => {
     return (
         <>
             <header className={classes.header}>
@@ -36,4 +36,4 @@ export const Page: React.FC = () => {
     );
 };
 
-export default Page;
+export default CommunityPage;

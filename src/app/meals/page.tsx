@@ -2,26 +2,27 @@ import React from "react";
 import Link from "next/link";
 import classes from "./page.module.css";
 import { MealsGrid } from "../../components/meals/meal-grid";
+import { getMeals } from "../../lib/meals";
 
-export const MealsPage: React.FC = () => {
+export const MealsPage: React.FC = async () => {
+    const meals = await getMeals();
+
     return (
         <>
-            <header className={classes.header}>
-                <div className={classes.slideshow}></div>
-                <div>
-                    <div className={classes.hero}>
-                        <h1>NextLevel Food for NextLevel Foodies</h1>
-                        <p>Taste & share food from all over the world.</p>
-                    </div>
-                    <div className={classes.cta}>
-                        <Link href="/community">Join the Community</Link>
-                        <Link href="/meals">Explore Meals</Link>
-                    </div>
-                </div>
-            </header>
-            <main>
-                <MealsGrid meals={[]} />
-            </main>
+            <>
+                <header className={classes.header}>
+                    <h1>
+                        Delicious meals, created <span className={classes.highlight}>by you</span>
+                    </h1>
+                    <p>Choose your favorite recipe and cook it yourself. It is easy and fun!</p>
+                    <p className={classes.cta}>
+                        <Link href="/meals/share">Share Your Favorite Recipe</Link>
+                    </p>
+                </header>
+                <main className={classes.main}>
+                    <MealsGrid meals={meals} />
+                </main>
+            </>
         </>
     );
 };
