@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <body className={"bg-neutral-700"}>
                 <Header />
-                <main>{children}</main>
+                {children}
             </body>
         </html>
     );

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ImageSlideShow } from "../components/home/image-slide-show";
 
-export default function Home({ children }: { children: React.ReactNode }) {
+export default function Home() {
     return (
         <>
             <header className="flex gap-[48px] mx-auto my-[48px] w-[90%] max-w-[75rem]">
@@ -14,7 +14,7 @@ export default function Home({ children }: { children: React.ReactNode }) {
                         <h1 className="text-4xl font-bold bg-gradient-to-r text-transparent from-[#f9572a] to-[#ffc905] bg-clip-text ">
                             {"NextLevel Food for NextLevel Foodies"}
                         </h1>
-                        <p>{"Taste & share food from all over the world"}</p>
+                        <p>{"Taste & share food from alil over the world"}</p>
                     </div>
                     <div id="CTA" className="flex gap-4 text-2xl">
                         <Link

@@ -5,7 +5,7 @@ import mealIcon from "@/assets/meal.png";
 import communityIcon from "@/assets/community.png";
 import eventsIcon from "@/assets/events.png";
 
-export const CommunityPage: React.FC = () => {
+export default function CommunityPage() {
     return (
         <>
             <header className={classes.header}>
@@ -34,6 +34,6 @@ export const CommunityPage: React.FC = () => {
             </main>
         </>
     );
-};
+}
 
-export default CommunityPage;
+// export default CommunityPage;
